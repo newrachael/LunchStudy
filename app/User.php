@@ -23,4 +23,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    /**
+     * Get the curriculums.
+     */
+    public function curriculum()
+    {
+    	return $this->hasMany(Curriculum::class);
+    }    
 }
